@@ -9,5 +9,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, () => {
-  console.log(`Server running port: ${port}/`);
+  console.log(`Server running port - using multistage build on node 11: ${port}/`);
 });

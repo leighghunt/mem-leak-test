@@ -1,4 +1,4 @@
-FROM balenalib/raspberry-pi-node:6
+FROM balenalib/raspberry-pi-node:11 as build-env
 
 RUN sudo sed 's/$/ universe/' -i /etc/apt/sources.list
 RUN sudo apt-get update
@@ -7,13 +7,14 @@ RUN sudo apt-get install python-pip python make build-essential
 WORKDIR /root/
 
 # Install app dependencies
-#COPY dist/package.json .
+COPY package.json .
 COPY app.js .
-#RUN npm install --production
+RUN npm install --production
 
-#COPY dist/ .
+FROM balenalib/raspberry-pi-node:11
+WORKDIR /root/
+COPY --from=build-env /root/ ./
 
 EXPOSE 3000
-#ENV NODE_MAX_MEM=100
-#CMD ["node", "app.js", "--max-old-space-size=200"]
+
 CMD ["node", "app.js"]

@@ -1,0 +1,19 @@
+{
+  "name": "mem-leak-test",
+  "version": "1.0.0",
+  "description": "``` docker run -p 80:3000 leighghunt/mem-leak-test ```",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leighghunt/mem-leak-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leighghunt/mem-leak-test/issues"
+  },
+  "homepage": "https://github.com/leighghunt/mem-leak-test#readme"
+}
