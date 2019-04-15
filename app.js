@@ -10,4 +10,5 @@ const server = http.createServer((req, res) => {
 
 server.listen(port, () => {
   console.log(`Server running port - using multistage build on node 11: ${port}/`);
+  console.log(`Adding serialport package, and bunch of npm stuff, but not calling serialport`);
 });

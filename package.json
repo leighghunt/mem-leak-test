@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/leighghunt/mem-leak-test/issues"
   },
-  "homepage": "https://github.com/leighghunt/mem-leak-test#readme"
+  "homepage": "https://github.com/leighghunt/mem-leak-test#readme",
+  "dependencies": {
+    "serialport": "^7.1.4"
+  }
 }
